@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Table } from "reactstrap";
-import Child from "./Child";
+// import Child from "./Child";
 
 export default function App() {
   const [person, setPerson] = useState([]);
@@ -53,7 +52,7 @@ export default function App() {
         />
         <button type="submit">Submit</button>
       </form>
-      <Table bordered>
+      <table>
         <thead>
           <tr>
             <th>
@@ -81,8 +80,8 @@ export default function App() {
             </tr>
           ))}
         </tbody>
-      </Table>
-      <Child person={person} />
+      </table>
+      // <Child person={person} />
     </div>
   );
 }
