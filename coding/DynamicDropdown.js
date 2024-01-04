@@ -5,7 +5,7 @@ const countries = [
   { name: "Bangladesh", value: "BG", cities: ["Dhaka", "Chittagong"] },
 ];
 export default function App() {
-  const [country, setCountry] = useState(0);
+  const [country, setCountry] = useState("");
   return (
     <div className="App">
       <select
@@ -14,6 +14,9 @@ export default function App() {
           setCountry(e.target.value);
         }}
       >
+        <option value="" disabled>
+          Select country
+        </option>
         {countries.map((item, index) => (
           <option value={index} key={index}>
             {item.name}
